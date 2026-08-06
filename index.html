@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>社畜走り — 走れば、間に合う。</title>
+<meta name="description" content="家を出た瞬間に「歩け／走れ／諦めろ」を突きつける、朝の通勤ダッシュ判定アプリ。">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero { text-align: center; padding: 20px 0 44px; }
+  .hero h1 { font-size: clamp(38px, 9vw, 62px); line-height: 1.15; margin: 0 0 16px; }
+  .hero h1 .ac { color: var(--accent); }
+  .hero p { color: var(--soft); max-width: 30em; margin: 0 auto; }
+  .verdicts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 36px 0 8px; }
+  .v { color: #fff; padding: 26px 12px; text-align: center; }
+  .v .l { font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.2em; opacity: 0.9; }
+  .v .w { font-family: 'Hiragino Mincho ProN', serif; font-weight: 800; font-size: clamp(26px, 7vw, 38px); line-height: 1.3; }
+  .feat { display: grid; gap: 20px; margin: 8px 0 0; }
+  .feat div { border-top: 1px solid var(--line); padding-top: 16px; }
+  .feat b { display: block; font-size: 16px; margin-bottom: 4px; }
+  .feat span { font-size: 14px; color: var(--soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="mark" href="index.html"><span class="seal">走</span>社畜走り</a>
+  </header>
+
+  <div class="hero">
+    <h1>走れば、<br><span class="ac">間に合う。</span></h1>
+    <p>家を出た瞬間に開く、朝専用アプリ。登録した駅と時刻から「乗るべき電車」を割り出し、
+      GPSと学習したあなたの歩速で、その場で突きつけます。</p>
+  </div>
+
+  <div class="verdicts">
+    <div class="v" style="background:#2a6f44"><div class="l">SAFE</div><div class="w">歩け</div></div>
+    <div class="v" style="background:#c2761a"><div class="l">RUN</div><div class="w">走れ</div></div>
+    <div class="v" style="background:#d4341f"><div class="l">DEAD</div><div class="w">諦めろ</div></div>
+  </div>
+
+  <h2>できること</h2>
+  <div class="feat">
+    <div><b>3段階の判定</b><span>必要な速度を計算し、歩けば足りるのか、走らないと届かないのかを断定します。</span></div>
+    <div><b>出発の通知</b><span>平日の朝、家を出る時刻の15分前・5分前・リミットに急かします。土日祝と有給は鳴りません。</span></div>
+    <div><b>記録して学習</b><span>間に合ったかを1タップ記録すると、あなたの脚に合わせて判定が正確になります。</span></div>
+    <div><b>社畜レベルと勤怠月報</b><span>間に合った確率でレベルが決まります。月次の「勤怠月報」は画像でシェアできます。</span></div>
+    <div><b>全国9,472駅</b><span>JRも私鉄も地方路線も。同じ駅名は事業者で選び分けられます。</span></div>
+  </div>
+
+  <h2>安全のお願い</h2>
+  <p>
+    判定は目安です。<strong>駅構内・階段・ホームでの走行は危険です。</strong>
+    表示にかかわらず、周囲の状況を見て安全を最優先に行動してください。
+    間に合わない朝があっても、あなたの価値は変わりません。
+  </p>
+
+  <footer>
+    <a href="privacy.html">プライバシー</a><a href="support.html">サポート</a><a href="terms.html">利用規約</a><br><br>
+    © ZERO DESIGN
+  </footer>
+</div>
+</body>
+</html>
