@@ -35,7 +35,9 @@ h2 {
   font-size: 20px; margin: 40px 0 12px; padding-top: 22px; border-top: 1px solid var(--line);
 }
 h2:first-of-type { border-top: none; padding-top: 0; }
+h3 { font-size: 15px; font-weight: 700; margin: 26px 0 10px; }
 p, li { font-size: 15px; }
+.note { font-size: 13.5px; color: var(--soft); margin: -6px 0 18px; }
 p { margin: 0 0 14px; }
 ul { padding-left: 1.3em; margin: 0 0 14px; }
 li { margin-bottom: 7px; }
