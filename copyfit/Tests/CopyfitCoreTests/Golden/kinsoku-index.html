@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'">
+<meta name="referrer" content="no-referrer">
+<title>Copyfit監査レポート</title>
+<style>:root{--bg:#ffffff;--fg:#1b1b1f;--muted:#5c5f66;--line:#c9ccd3;--card:#f5f6f8;--link:#0b57d0;
+--pass:#1e6b34;--warn:#8a5300;--unknown:#4b4f58;--fail:#b3261e;--region:#0b57d0;--forbidden:#b3261e;--ocr:#1e6b34;--ink:#a14d00;color-scheme:light dark}
+@media (prefers-color-scheme: dark){:root{--bg:#121316;--fg:#e8e9ec;--muted:#a7abb3;--line:#3a3d44;--card:#1d1f23;--link:#8ab4f8;
+--pass:#7fd18b;--warn:#f2b45a;--unknown:#c3c7cf;--fail:#ff8a80;--region:#8ab4f8;--forbidden:#ff8a80;--ocr:#7fd18b;--ink:#ffb870}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+main{max-width:1200px;margin:0 auto;padding:16px}
+a{color:var(--link)} a:focus-visible,summary:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:var(--bg);padding:4px 8px}
+h1{font-size:1.6rem}h2{font-size:1.3rem;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:2rem}h3{font-size:1.1rem}
+.disclaimer{background:var(--card);border-left:4px solid var(--warn);padding:8px 12px}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+.findings td:nth-child(2){white-space:nowrap}
+.findings td{overflow-wrap:anywhere}th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+caption{text-align:left;color:var(--muted);padding:4px 0}
+.scroll{overflow-x:auto}
+.badge{display:inline-block;font-weight:700;white-space:nowrap;border:1.5px solid currentColor;border-radius:4px;padding:0 6px;font-size:.85rem}
+.s-pass{color:var(--pass)}.s-warn{color:var(--warn)}.s-unknown{color:var(--unknown);border-style:dashed}.s-fail{color:var(--fail)}
+.muted{color:var(--muted)} .meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px}.meta dt{font-weight:700}.meta dd{margin:0;overflow-wrap:anywhere}
+.asset{border:1px solid var(--line);border-radius:8px;padding:12px;margin:16px 0;background:var(--card)}
+.asset-body{display:grid;grid-template-columns:minmax(120px,240px) minmax(0,1fr);gap:16px;margin-bottom:8px}
+@media (max-width:560px){.asset-body{grid-template-columns:minmax(0,1fr)}figure{max-width:240px}}
+.counts .badge{margin-right:2px}
+figure{margin:0}.frame{position:relative;width:100%;border:1px solid var(--line);background:repeating-conic-gradient(#8883 0 25%,#0000 0 50%) 0 0/16px 16px}
+.frame img{display:block;width:100%;height:100%}
+.ov{position:absolute;pointer-events:none}
+.ov-region{border:2px dashed var(--region)}
+.ov-forbidden{border:2px solid var(--forbidden);background:repeating-linear-gradient(45deg,color-mix(in srgb,var(--forbidden) 35%,transparent) 0 4px,transparent 4px 10px)}
+.ov-ocr{border:1px solid var(--ocr)}
+.ov-ink{border:2px dotted var(--ink)}
+.legend{list-style:none;padding:0;margin:4px 0;font-size:.85rem}.legend li{display:flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:18px;height:12px;position:static}
+.path{color:var(--muted);word-break:break-all;margin-top:0}
+.note{border-left:4px solid var(--unknown);padding-left:8px}
+pre{white-space:pre-wrap;margin:0;font:inherit}
+details{margin:8px 0}summary{cursor:pointer}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;word-break:break-all}</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<main id="main">
+<h1>Copyfit監査レポート</h1>
+<p class="disclaimer">本レポートは提出前のローカル検査結果であり、App Store審査・アップロードの成功を保証しません。UNKNOWNは「検査できなかった」ことを意味し、問題がないことを意味しません。</p>
+<section aria-labelledby="h-summary">
+<h2 id="h-summary">概要</h2>
+<table class="summary">
+<caption>判定の件数（PASSは検査を実施して問題がなかった項目のみ）</caption>
+<thead><tr><th scope="col">状態</th><th scope="col">件数</th><th scope="col">意味</th></tr></thead>
+<tbody>
+<tr><td><span class="badge s-fail"><span aria-hidden="true">✖</span> FAIL</span></td><td>0</td><td>確定した不備。提出前に修正が必要</td></tr>
+<tr><td><span class="badge s-warn"><span aria-hidden="true">▲</span> WARN</span></td><td>1</td><td>不備の疑い（OCR/推定を含む）。目視確認が必要</td></tr>
+<tr><td><span class="badge s-unknown"><span aria-hidden="true">?</span> UNKNOWN</span></td><td>2</td><td>情報不足などで検査できなかった項目。PASSではありません</td></tr>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td>6</td><td>検査して問題が見つからなかった項目</td></tr>
+</tbody>
+</table>
+<dl class="meta">
+<dt>画像</dt><dd>manifest記載 1件 / 検査 1件</dd>
+<dt>ruleset</dt><dd>apple-screenshots-2026-10-03（確認日 2026-10-03）</dd>
+<dt>OCR</dt><dd>none (golden)</dd>
+<dt>文字fit計測</dt><dd>none (golden)</dd>
+<dt>tool</dt><dd>copyfit 0.1.0 / report schema 1</dd>
+<dt>OS</dt><dd>golden-os</dd>
+<dt>生成日時</dt><dd>2026-10-03T00:00:00Z</dd>
+</dl>
+</section>
+<section aria-labelledby="h-matrix">
+<h2 id="h-matrix">locale / target別一覧</h2>
+<div class="scroll"><table>
+<caption>各セルはその画像で最も重い判定。リンクで詳細へ移動</caption>
+<thead><tr><th scope="col">locale</th><th scope="col">target</th><th scope="col">slot 01</th></tr></thead>
+<tbody>
+<tr><th scope="row">ja-JP</th><td>iphone-6.9</td><td><a href="#asset-b9ecfae9a33d"><span class="badge s-unknown"><span aria-hidden="true">?</span> UNKNOWN</span></a></td></tr>
+</tbody></table></div>
+</section>
+
+<section aria-labelledby="h-global">
+<h2 id="h-global">全体・欠落・文言表の指摘</h2>
+<div class="scroll"><table class="findings">
+<caption>画像に紐づかない指摘（ruleset、欠落画像、文言表）</caption>
+<thead><tr><th scope="col">状態</th><th scope="col">ルール</th><th scope="col">根拠</th><th scope="col">対象</th><th scope="col">領域</th><th scope="col">内容</th><th scope="col">根拠データ</th><th scope="col">修正案</th></tr></thead>
+<tbody>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td><code>RULE001</code> v1</td><td>ツール/ruleset</td><td>全体</td><td>—</td><td>ruleset「apple-screenshots-2026-10-03」（確認日2026-10-03、0日経過）を使用</td><td><ul><li>https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications</li><li>https://developer.apple.com/help/app-store-connect/manage-app-information/upload-app-previews-and-screenshots</li></ul></td><td></td></tr>
+</tbody></table></div>
+</section>
+
+<section aria-labelledby="h-assets">
+<h2 id="h-assets">画像別の詳細</h2>
+<section class="asset" id="asset-b9ecfae9a33d" aria-labelledby="asset-b9ecfae9a33d-h">
+<h3 id="asset-b9ecfae9a33d-h">ja-JP / iphone-6.9 / slot 01</h3>
+<p class="path">images/ja-JP/iphone-6.9/01.png — 1290×2796 png RGB 8bit</p>
+<div class="asset-body">
+<p class="noimg">画像を表示できません（欠落または破損）。</p>
+<div class="asset-side">
+<p class="counts"><span class="badge s-fail"><span aria-hidden="true">✖</span> FAIL</span> 0 <span class="badge s-unknown"><span aria-hidden="true">?</span> UNKNOWN</span> 2 <span class="badge s-warn"><span aria-hidden="true">▲</span> WARN</span> 1 <span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span> 5</p>
+<p class="note">OCR利用不可: none (golden)</p>
+<details><summary>期待文言（1領域）</summary><dl class="copy"><dt>headline [80, 160, 1130, 300]</dt><dd><pre>残業時間を記録し
+、グラフで振り返る</pre></dd></dl></details>
+</div>
+</div>
+<div class="scroll"><table class="findings">
+<caption>要確認の指摘（3件）</caption>
+<thead><tr><th scope="col">状態</th><th scope="col">ルール</th><th scope="col">根拠</th><th scope="col">領域</th><th scope="col">内容</th><th scope="col">根拠データ</th><th scope="col">修正案</th></tr></thead>
+<tbody>
+<tr><td><span class="badge s-warn"><span aria-hidden="true">▲</span> WARN</span></td><td><code>BREAK001</code> v1</td><td>プロジェクト規則</td><td>headline</td><td>2行目が行頭禁則文字「、」で始まっています</td><td><ul><li>行の出典: 文言の明示改行</li><li>行: 「残業時間を記録し」 / 「、グラフで振り返る」</li></ul></td><td>改行位置を調整してください。意図した改行ならbreakAllowlistに理由と期限付きで追加してください</td></tr>
+<tr><td><span class="badge s-unknown"><span aria-hidden="true">?</span> UNKNOWN</span></td><td><code>FIT001</code> v1</td><td>プロジェクト規則</td><td>headline</td><td>文字fit計測を行えません: golden</td><td></td><td></td></tr>
+<tr><td><span class="badge s-unknown"><span aria-hidden="true">?</span> UNKNOWN</span></td><td><code>TEXT001</code> v1</td><td>heuristic（推定）</td><td>headline</td><td>OCRを利用できません: none (golden)</td><td><ul><li>期待文言: 残業時間を記録し
+、グラフで振り返る</li></ul></td><td>目視で確認してください</td></tr>
+</tbody></table></div>
+<details><summary>PASSした検査（5件）</summary>
+<div class="scroll"><table class="findings">
+<caption>PASS</caption>
+<thead><tr><th scope="col">状態</th><th scope="col">ルール</th><th scope="col">根拠</th><th scope="col">領域</th><th scope="col">内容</th><th scope="col">根拠データ</th><th scope="col">修正案</th></tr></thead>
+<tbody>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td><code>ASSET001</code> v1</td><td>プロジェクト規則</td><td>—</td><td>必要な画像があります</td><td></td><td></td></tr>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td><code>IMAGE001</code> v1</td><td>Apple公式要件</td><td>—</td><td>iPhone 6.9&quot;の許容寸法です<br><small>実測: 1290×2796</small></td><td></td><td></td></tr>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td><code>IMAGE001</code> v1</td><td>プロジェクト規則</td><td>—</td><td>寸法がmanifestの指定と一致します<br><small>実測: 1290×2796</small></td><td></td><td></td></tr>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td><code>IMAGE002</code> v1</td><td>Apple公式要件</td><td>—</td><td>alpha channelはありません<br><small>実測: RGB 8bit</small></td><td></td><td></td></tr>
+<tr><td><span class="badge s-pass"><span aria-hidden="true">✓</span> PASS</span></td><td><code>BREAK002</code> v1</td><td>heuristic（推定）</td><td>headline</td><td>改行の問題は見つかりません（文言の明示改行）</td><td><ul><li>行の出典: 文言の明示改行</li><li>行: 「残業時間を記録し」 / 「、グラフで振り返る」</li></ul></td><td></td></tr>
+</tbody></table></div>
+</details>
+</section>
+</section>
+
+<section aria-labelledby="h-inputs">
+<h2 id="h-inputs">入力ファイルのSHA-256</h2>
+<div class="scroll"><table><thead><tr><th scope="col">ファイル</th><th scope="col">SHA-256</th></tr></thead><tbody>
+<tr><td>copy.csv</td><td><code>b25e46e9d9d66c806cf21edc26c643e24c5ada726b2e7fd2b75a36709d8ae6b6</code></td></tr>
+<tr><td>images/ja-JP/iphone-6.9/01.png</td><td><code>aff92b1b56a0b5e84c80b1209443aac3640fdb9459dd56017fdbf4aba52805ff</code></td></tr>
+<tr><td>manifest.json</td><td><code>a79bf7a36b2fce67d6fb3e89fc631f7cda8127aa352bd03a9d9638ba1b661865</code></td></tr>
+</tbody></table></div>
+</section>
+</main>
+</body>
+</html>

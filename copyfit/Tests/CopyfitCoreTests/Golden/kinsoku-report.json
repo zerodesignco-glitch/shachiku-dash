@@ -1,0 +1,208 @@
+{
+  "assets" : [
+    {
+      "facts" : {
+        "colorDescription" : "RGB 8bit",
+        "extensionMismatch" : false,
+        "fileHash" : "aff92b1b56a0b5e84c80b1209443aac3640fdb9459dd56017fdbf4aba52805ff",
+        "fileSizeBytes" : 34468,
+        "format" : "png",
+        "hasAlphaChannel" : false,
+        "orientation" : 1,
+        "pixelHeight" : 2796,
+        "pixelWidth" : 1290
+      },
+      "forbiddenRects" : [
+
+      ],
+      "key" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "ocrNote" : "OCR利用不可: none (golden)",
+      "ocrObservations" : [
+
+      ],
+      "path" : "images/ja-JP/iphone-6.9/01.png",
+      "regions" : [
+        {
+          "expectedCopy" : "残業時間を記録し\n、グラフで振り返る",
+          "id" : "headline",
+          "rect" : [
+            80,
+            160,
+            1130,
+            300
+          ]
+        }
+      ]
+    }
+  ],
+  "disclaimer" : "本レポートは提出前のローカル検査結果であり、App Store審査・アップロードの成功を保証しません。UNKNOWNは「検査できなかった」ことを意味し、問題がないことを意味しません。",
+  "findings" : [
+    {
+      "basis" : "tool-meta",
+      "evidence" : [
+        "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications",
+        "https://developer.apple.com/help/app-store-connect/manage-app-information/upload-app-previews-and-screenshots"
+      ],
+      "message" : "ruleset「apple-screenshots-2026-10-03」（確認日2026-10-03、0日経過）を使用",
+      "ruleID" : "RULE001",
+      "ruleVersion" : 1,
+      "status" : "PASS"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "project-rule",
+      "evidence" : [
+
+      ],
+      "message" : "必要な画像があります",
+      "ruleID" : "ASSET001",
+      "ruleVersion" : 1,
+      "status" : "PASS"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "apple-official",
+      "evidence" : [
+
+      ],
+      "measuredValue" : "1290×2796",
+      "message" : "iPhone 6.9\"の許容寸法です",
+      "ruleID" : "IMAGE001",
+      "ruleVersion" : 1,
+      "status" : "PASS"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "project-rule",
+      "evidence" : [
+
+      ],
+      "measuredValue" : "1290×2796",
+      "message" : "寸法がmanifestの指定と一致します",
+      "ruleID" : "IMAGE001",
+      "ruleVersion" : 1,
+      "status" : "PASS"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "apple-official",
+      "evidence" : [
+
+      ],
+      "measuredValue" : "RGB 8bit",
+      "message" : "alpha channelはありません",
+      "ruleID" : "IMAGE002",
+      "ruleVersion" : 1,
+      "status" : "PASS"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "project-rule",
+      "evidence" : [
+        "行の出典: 文言の明示改行",
+        "行: 「残業時間を記録し」 / 「、グラフで振り返る」"
+      ],
+      "message" : "2行目が行頭禁則文字「、」で始まっています",
+      "regionID" : "headline",
+      "remediation" : "改行位置を調整してください。意図した改行ならbreakAllowlistに理由と期限付きで追加してください",
+      "ruleID" : "BREAK001",
+      "ruleVersion" : 1,
+      "status" : "WARN"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "heuristic",
+      "evidence" : [
+        "行の出典: 文言の明示改行",
+        "行: 「残業時間を記録し」 / 「、グラフで振り返る」"
+      ],
+      "message" : "改行の問題は見つかりません（文言の明示改行）",
+      "regionID" : "headline",
+      "ruleID" : "BREAK002",
+      "ruleVersion" : 1,
+      "status" : "PASS"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "project-rule",
+      "evidence" : [
+
+      ],
+      "message" : "文字fit計測を行えません: golden",
+      "regionID" : "headline",
+      "ruleID" : "FIT001",
+      "ruleVersion" : 1,
+      "status" : "UNKNOWN"
+    },
+    {
+      "assetKey" : {
+        "locale" : "ja-JP",
+        "slot" : "01",
+        "target" : "iphone-6.9"
+      },
+      "basis" : "heuristic",
+      "evidence" : [
+        "期待文言: 残業時間を記録し\n、グラフで振り返る"
+      ],
+      "message" : "OCRを利用できません: none (golden)",
+      "regionID" : "headline",
+      "remediation" : "目視で確認してください",
+      "ruleID" : "TEXT001",
+      "ruleVersion" : 1,
+      "status" : "UNKNOWN"
+    }
+  ],
+  "generatedAt" : "2026-10-03T00:00:00Z",
+  "inputHashes" : {
+    "copy.csv" : "b25e46e9d9d66c806cf21edc26c643e24c5ada726b2e7fd2b75a36709d8ae6b6",
+    "images/ja-JP/iphone-6.9/01.png" : "aff92b1b56a0b5e84c80b1209443aac3640fdb9459dd56017fdbf4aba52805ff",
+    "manifest.json" : "a79bf7a36b2fce67d6fb3e89fc631f7cda8127aa352bd03a9d9638ba1b661865"
+  },
+  "ocrEngine" : "none (golden)",
+  "osVersion" : "golden-os",
+  "rulesetCheckedAt" : "2026-10-03",
+  "rulesetVersion" : "apple-screenshots-2026-10-03",
+  "schemaVersion" : 1,
+  "summary" : {
+    "assetsDeclared" : 1,
+    "assetsInspected" : 1,
+    "fail" : 0,
+    "pass" : 6,
+    "unknown" : 2,
+    "warn" : 1
+  },
+  "textMeasurer" : "none (golden)",
+  "toolVersion" : "0.1.0"
+}
