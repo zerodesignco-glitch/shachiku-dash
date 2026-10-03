@@ -8,6 +8,7 @@
   - OCRで読めないことを、文字の欠落とは判断しません（UNKNOWNとして扱います）。
   - 文字のはみ出しを確定（FAIL）できるのは、`layoutMetadataVerified: true` のmetadataをCoreTextで組んだ場合だけです。
 - **CoreTextの計測は、デザインツールの組版と一致しません。** Figma、Sketch、Photoshopとは、字形、カーニング、行送り、禁則の処理系が異なります。境界ぎりぎりのケース（数px）では、結果が食い違うことがあります。
+- **折返しは送り幅（advance）基準です。** CoreTextは字のink幅ではなく送り幅で改行するため、ink幅ちょうどのboxでも折り返すことがあります（macOS CIで確認）。FIT001は「CoreTextで組んだ行数・全glyph配置・ink範囲」で判定します。
 - **fontの代替はしません。** 指定したPostScript名のfontが入っていなければ、FIT001はUNKNOWNになります。
 
 ## 実装上の制限（v0.1）

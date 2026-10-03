@@ -43,13 +43,22 @@ final class PlatformAdapterTests: XCTestCase {
         }
         XCTAssertEqual(one.lines, ["Hello"])
         XCTAssertTrue(one.allGlyphsPlaced)
-        let inkW = one.inkBounds.maxX
-        // ink幅ちょうど+1pxのboxなら1行、大きく狭めると折返し/はみ出し
-        if case .measured(let fit) = m.measure(text: "Hello", metadata: meta,
-                                               rect: PixelRect(x: 0, y: 0, width: (inkW + 1).rounded(.up), height: 300), locale: "en-US") {
-            XCTAssertEqual(fit.lines.count, 1)
-            XCTAssertEqual(PixelRect(x: 0, y: 0, width: (inkW + 1).rounded(.up), height: 300).overflow(of: fit.inkBounds), 0)
-        } else { XCTFail() }
+        // CoreTextは送り幅（advance）で折り返すため、境界はink幅ではなく探索で求める。
+        func lines(_ w: Double) -> LayoutMeasurement? {
+            if case .measured(let r) = m.measure(text: "Hello", metadata: meta,
+                                                 rect: PixelRect(x: 0, y: 0, width: w, height: 300), locale: "en-US") { return r }
+            return nil
+        }
+        var lo = 1.0, hi = 2000.0
+        while hi - lo > 1 {
+            let mid = ((lo + hi) / 2).rounded(.down)
+            if (lines(mid)?.lines.count ?? 99) == 1 { hi = mid } else { lo = mid }
+        }
+        guard let fit = lines(hi) else { return XCTFail("計測できません") }
+        XCTAssertEqual(fit.lines.count, 1)
+        XCTAssertEqual(PixelRect(x: 0, y: 0, width: hi, height: 300).overflow(of: fit.inkBounds), 0, "1行に収まる最小幅ではinkもbox内")
+        XCTAssertGreaterThan(lines(hi - 1)?.lines.count ?? 0, 1, "1px狭めると折り返す")
+        XCTAssertLessThanOrEqual(one.inkBounds.maxX, hi, "ink幅は送り幅以下")
         if case .measured(let tight) = m.measure(text: "Hello world again", metadata: meta,
                                                  rect: PixelRect(x: 0, y: 0, width: 300, height: 120), locale: "en-US") {
             XCTAssertFalse(tight.allGlyphsPlaced)

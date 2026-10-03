@@ -74,4 +74,4 @@
 - 環境：Ubuntu 24.04（コンテナ）、Swift 6.0.3（Ubuntu archiveの `swiftlang` パッケージ）、4 vCPU
 - コマンド：`swift build -Xswiftc -warnings-as-errors`、`swift build -c release`、`swift test`
 - 結果：62 tests、失敗0（macOS専用のテスト3件は、この環境ではコンパイル対象外。代わりにunavailableを確認する1件を実行）
-- macOS：`.github/workflows/copyfit.yml` の `macos-15` jobで、build（debugとrelease）、test、demo12の監査を実行する。結果はPRのCIで確認すること
+- macOS（GitHub Actions macos-15 / macOS 15.7 / Swift 6.1.2、2026-10-03）：debug/releaseとも `-warnings-as-errors` でbuild成功。Visionは合成見出しを「Make every commute」「faster.」としてconfidence 1.0で読み、座標も上下反転なし（y≈215〜430）。OCRなしの性能はdemo12が0.37秒、100枚が1.40秒。初回はCoreTextの境界テストの前提（ink幅＝折返し幅）が誤っていたため修正した
