@@ -31,7 +31,7 @@
 | 欠落、寸法などの確定ルールを正しく検出する | ✓（fixtureで見逃し0、誤検知0） |
 | OCRの不確かさを表示する | ✓（ロジックとレポート：confidence、UNKNOWN、原文とOCRの差分）。△ Visionの実機での精度は**未測定** |
 | 1コマンドで現場の確認時間を減らせる | ✓ 寸法、欠落、alpha、禁則、禁止領域の一覧は即座に出る。△ 実案件での時間短縮は**未検証** |
-| 12画像を準備5分以内・検査30秒程度（選定Mac） | △ 検査はLinuxで0.05〜0.18秒（OCRなし）。**Macでの実測は未実施**。manifestの準備時間も未測定（textRegionの座標とfont情報を手で書く必要があり、ここが最大のリスク） |
+| 12画像を準備5分以内・検査30秒程度（選定Mac） | △ 検査はLinuxで0.05〜0.18秒（OCRなし）。GitHub Actions macos-15（仮想マシン、Vision＋CoreText有効）では11枚11.2秒で、目標の範囲内。**選定Macでの実測は未実施**。manifestの準備時間も未測定（textRegionの座標とfont情報を手で書く必要があり、ここが最大のリスク） |
 
 **UNREの既存workflowから、box情報やfont情報を取れるか**：UNREの素材と既存workflowが手元にないため、確認できていません。デザインツールから書き出せない場合、文字検査の価値はOCRによる推定（WARN/UNKNOWN）に限られます。
 
@@ -49,7 +49,7 @@
 
 ## 次の手順
 
-1. PRのmacOS CIの結果を確認する（Visionの座標、CoreTextの境界）。
+1. ~~PRのmacOS CIの結果を確認する~~ → 完了（2026-10-03）。build、test、Visionの座標、CoreTextの境界をすべて確認。
 2. 選定したMacで、demo12の処理時間とメモリを実測する。
 3. UNREの実案件1件分の素材で、目視時間の前後、不備の発見数、不要な警告の数を記録する。結果は [INTERNAL_USE_RESULT.md](INTERNAL_USE_RESULT.md) に書く。
 4. 実機OCRでTEXT001とFIT002のprecisionを評価する。

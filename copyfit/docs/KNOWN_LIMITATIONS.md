@@ -13,7 +13,7 @@
 
 ## 実装上の制限（v0.1）
 
-- **macOSのadapter（Vision、CoreText、ImageIO）は、初回の開発環境（Linux）ではコンパイルも実行もしていません。** GitHub Actionsの`macos-15` jobで確認する前提です。選定したMacでの実測（12画像の処理時間、Visionの精度、メモリ使用量）は**未実施**です。
+- **macOSのadapter（Vision、CoreText、ImageIO）は、GitHub Actionsの`macos-15`（仮想マシン）でのみ検証しています。** build、test、demo12の監査（11枚で11.2秒）は通りました。選定したMacでの実測（処理時間、Visionの精度、メモリ使用量）は**未実施**です。
 - **Linuxでの扱い**：OCRとfit計測は常にUNKNOWNです。画像の破損は構造の検査（PNGのchunk CRCとIEND、JPEGのmarkerとEOI）だけで判定し、画素のデコードは行いません。
 - **OCRのheuristic（TEXT001、FIT002）は精度が未評価です。** 実機のOCRデータセットで、precision、recall、UNKNOWN率を測る必要があります。測った結果が目標（precision 90%）に届かない場合は、既定でOFFにする判断が必要です。
 - **改行のheuristic（BREAK002）**：ラベル付きの44サンプルでprecision 0.95でした。サンプルは自作で、規模も小さいので、実案件で再評価してください。

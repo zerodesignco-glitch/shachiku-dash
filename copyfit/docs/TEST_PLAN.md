@@ -63,7 +63,7 @@
 | 確定ルール（寸法、欠落、schema、形式）でfixtureの誤判定0 | **達成**（Linux、28 case + demo12。見逃し0、誤検知0） |
 | FIT001の1px余裕と1px不足の境界 | **達成**（注入した計測値によるunit test）。CoreTextの実計測による境界テストはmacOSのCIで実行 |
 | heuristicのprecision 90%以上 | 改行heuristic：**precision 0.950 / recall 0.950**（TP 19 / FP 1 / FN 1 / TN 23）。誤警告は「通勤を、／速く。」（2文字の短い最終行）、見逃しは「…erfassen und／auswerten」（1語だけの最終行が直前の行の25%より長い）。目標を満たしたため既定でON。OCRのheuristic（TEXT001/FIT002）は、実機OCRのデータセットがないため**未評価**（UNKNOWN率も未測定） |
-| 12画像を約30秒（選定Mac） | **選定Macでは未測定**。Linux（4 vCPU、OCRとCoreTextなし）ではdemo12が0.18秒、release CLIで0.05秒 |
+| 12画像を約30秒（選定Mac） | **選定Macでは未測定**。GitHub Actions macos-15（仮想マシン）でVision＋CoreText有効時、demo12（11枚）がrelease CLIで**11.2秒**（FAIL 4 / WARN 14 / UNKNOWN 27 / PASS 70、終了コード1）。WARNの内訳の目視確認はまだしていない。Linux（4 vCPU、OCRとCoreTextなし）ではdemo12が0.18秒、release CLIで0.05秒 |
 | 100画像でクラッシュやOOMがないこと | Linux（OCRなし）で100枚0.82秒、問題なし。Vision有効時のメモリ量は未測定（並列数は4に制限） |
 | HTMLとJSONの整合、offline、入力hash不変、全終了コード | **達成**（自動テスト） |
 | schema migration | schemaVersion 1のみ。未対応のversionは明示的なエラーにする（migrationの対象はまだない） |
