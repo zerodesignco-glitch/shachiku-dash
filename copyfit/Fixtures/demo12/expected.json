@@ -1,0 +1,45 @@
+{
+  "description": "Technical spike用12画像セット（1件欠落）",
+  "deterministic": [
+    {
+      "ruleID": "IMAGE002",
+      "status": "FAIL",
+      "asset": "ja-JP/ipad-13/01"
+    },
+    {
+      "ruleID": "IMAGE001",
+      "status": "FAIL",
+      "asset": "en-US/iphone-6.9/02"
+    },
+    {
+      "ruleID": "IMAGE001",
+      "status": "FAIL",
+      "asset": "en-US/iphone-6.9/02",
+      "note": "apple"
+    },
+    {
+      "ruleID": "ASSET001",
+      "status": "FAIL",
+      "asset": "de-DE/ipad-13/02"
+    },
+    {
+      "ruleID": "BREAK001",
+      "status": "WARN",
+      "asset": "ja-JP/iphone-6.9/02"
+    },
+    {
+      "ruleID": "BREAK001",
+      "status": "WARN",
+      "asset": "ja-JP/ipad-13/02"
+    }
+  ],
+  "heuristicMustInclude": [
+    {
+      "ruleID": "COPY002",
+      "status": "WARN",
+      "asset": null,
+      "region": "badge"
+    }
+  ],
+  "exitCode": 1
+}

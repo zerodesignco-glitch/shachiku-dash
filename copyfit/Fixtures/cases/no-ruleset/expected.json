@@ -1,0 +1,15 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "RULE001",
+      "status": "UNKNOWN",
+      "asset": null
+    },
+    {
+      "ruleID": "IMAGE002",
+      "status": "UNKNOWN",
+      "asset": "en-US/iphone-6.9/01"
+    }
+  ],
+  "exitCode": 0
+}

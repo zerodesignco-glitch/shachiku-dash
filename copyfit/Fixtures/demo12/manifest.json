@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "ruleset": "apple-screenshots-2026-10-03",
+  "requiredLocales": [
+    "ja-JP",
+    "en-US",
+    "de-DE"
+  ],
+  "requiredTargets": [
+    "iphone-6.9",
+    "ipad-13"
+  ],
+  "requiredSlots": [
+    "01",
+    "02"
+  ],
+  "fallbackPolicy": "explicit-only",
+  "assets": [
+    {
+      "locale": "ja-JP",
+      "target": "iphone-6.9",
+      "slot": "01",
+      "path": "images/ja-JP/iphone-6.9/01.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.01",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "HiraginoSans-W6",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        },
+        {
+          "id": "badge",
+          "copyKey": "badge",
+          "rectPx": [
+            80,
+            40,
+            300,
+            100
+          ]
+        }
+      ],
+      "forbiddenRectsPx": [
+        {
+          "id": "mockup-top",
+          "rectPx": [
+            154,
+            560,
+            982,
+            60
+          ],
+          "note": "端末mockup上端（社内design rule）"
+        }
+      ]
+    },
+    {
+      "locale": "ja-JP",
+      "target": "iphone-6.9",
+      "slot": "02",
+      "path": "images/ja-JP/iphone-6.9/02.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.02",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "HiraginoSans-W6",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    },
+    {
+      "locale": "ja-JP",
+      "target": "ipad-13",
+      "slot": "01",
+      "path": "images/ja-JP/ipad-13/01.png",
+      "expectedPixelSize": [
+        2064,
+        2752
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.01",
+          "rectPx": [
+            80,
+            160,
+            1904,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "HiraginoSans-W6",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        },
+        {
+          "id": "badge",
+          "copyKey": "badge",
+          "rectPx": [
+            80,
+            40,
+            300,
+            100
+          ]
+        }
+      ],
+      "forbiddenRectsPx": [
+        {
+          "id": "mockup-top",
+          "rectPx": [
+            247,
+            560,
+            1570,
+            60
+          ],
+          "note": "端末mockup上端（社内design rule）"
+        }
+      ]
+    },
+    {
+      "locale": "ja-JP",
+      "target": "ipad-13",
+      "slot": "02",
+      "path": "images/ja-JP/ipad-13/02.png",
+      "expectedPixelSize": [
+        2064,
+        2752
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.02",
+          "rectPx": [
+            80,
+            160,
+            1904,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "HiraginoSans-W6",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    },
+    {
+      "locale": "en-US",
+      "target": "iphone-6.9",
+      "slot": "01",
+      "path": "images/en-US/iphone-6.9/01.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.01",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        },
+        {
+          "id": "badge",
+          "copyKey": "badge",
+          "rectPx": [
+            80,
+            40,
+            300,
+            100
+          ]
+        }
+      ],
+      "forbiddenRectsPx": [
+        {
+          "id": "mockup-top",
+          "rectPx": [
+            154,
+            560,
+            982,
+            60
+          ],
+          "note": "端末mockup上端（社内design rule）"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "target": "iphone-6.9",
+      "slot": "02",
+      "path": "images/en-US/iphone-6.9/02.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.02",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    },
+    {
+      "locale": "en-US",
+      "target": "ipad-13",
+      "slot": "01",
+      "path": "images/en-US/ipad-13/01.png",
+      "expectedPixelSize": [
+        2064,
+        2752
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.01",
+          "rectPx": [
+            80,
+            160,
+            1904,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        },
+        {
+          "id": "badge",
+          "copyKey": "badge",
+          "rectPx": [
+            80,
+            40,
+            300,
+            100
+          ]
+        }
+      ],
+      "forbiddenRectsPx": [
+        {
+          "id": "mockup-top",
+          "rectPx": [
+            247,
+            560,
+            1570,
+            60
+          ],
+          "note": "端末mockup上端（社内design rule）"
+        }
+      ]
+    },
+    {
+      "locale": "en-US",
+      "target": "ipad-13",
+      "slot": "02",
+      "path": "images/en-US/ipad-13/02.png",
+      "expectedPixelSize": [
+        2064,
+        2752
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.02",
+          "rectPx": [
+            80,
+            160,
+            1904,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    },
+    {
+      "locale": "de-DE",
+      "target": "iphone-6.9",
+      "slot": "01",
+      "path": "images/de-DE/iphone-6.9/01.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.01",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        },
+        {
+          "id": "badge",
+          "copyKey": "badge",
+          "rectPx": [
+            80,
+            40,
+            300,
+            100
+          ]
+        }
+      ],
+      "forbiddenRectsPx": [
+        {
+          "id": "mockup-top",
+          "rectPx": [
+            154,
+            560,
+            982,
+            60
+          ],
+          "note": "端末mockup上端（社内design rule）"
+        }
+      ]
+    },
+    {
+      "locale": "de-DE",
+      "target": "iphone-6.9",
+      "slot": "02",
+      "path": "images/de-DE/iphone-6.9/02.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.02",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    },
+    {
+      "locale": "de-DE",
+      "target": "ipad-13",
+      "slot": "01",
+      "path": "images/de-DE/ipad-13/01.png",
+      "expectedPixelSize": [
+        2064,
+        2752
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline.01",
+          "rectPx": [
+            80,
+            160,
+            1904,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        },
+        {
+          "id": "badge",
+          "copyKey": "badge",
+          "rectPx": [
+            80,
+            40,
+            300,
+            100
+          ]
+        }
+      ],
+      "forbiddenRectsPx": [
+        {
+          "id": "mockup-top",
+          "rectPx": [
+            247,
+            560,
+            1570,
+            60
+          ],
+          "note": "端末mockup上端（社内design rule）"
+        }
+      ]
+    }
+  ],
+  "noBreakPhrases": {
+    "ja-JP": [
+      "残業時間"
+    ],
+    "en-US": [
+      "Pro Max"
+    ],
+    "de-DE": []
+  }
+}

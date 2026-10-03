@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "requiredLocales": [
+    "ja-JP",
+    "de-DE"
+  ],
+  "requiredTargets": [
+    "iphone-6.9"
+  ],
+  "requiredSlots": [
+    "01"
+  ],
+  "fallbackPolicy": "explicit-only",
+  "assets": [
+    {
+      "locale": "ja-JP",
+      "target": "iphone-6.9",
+      "slot": "01",
+      "path": "images/ja-JP/iphone-6.9/01.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "HiraginoSans-W6",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    },
+    {
+      "locale": "de-DE",
+      "target": "iphone-6.9",
+      "slot": "01",
+      "path": "images/de-DE/iphone-6.9/01.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    }
+  ],
+  "ruleset": "apple-screenshots-2026-10-03"
+}

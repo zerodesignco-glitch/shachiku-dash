@@ -1,0 +1,10 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "IMAGE001",
+      "status": "WARN",
+      "asset": "en-US/iphone-6.9/01"
+    }
+  ],
+  "exitCode": 0
+}

@@ -1,0 +1,12 @@
+{
+  "deterministic": [],
+  "exitCode": 0,
+  "heuristicMustInclude": [
+    {
+      "ruleID": "TEXT001",
+      "status": "UNKNOWN",
+      "asset": "en-US/iphone-6.9/01",
+      "region": "headline"
+    }
+  ]
+}

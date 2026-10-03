@@ -1,0 +1,10 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "RULE001",
+      "status": "UNKNOWN",
+      "asset": "en-US/vision-pro/01"
+    }
+  ],
+  "exitCode": 0
+}

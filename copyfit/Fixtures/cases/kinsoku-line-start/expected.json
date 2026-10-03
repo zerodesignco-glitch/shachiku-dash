@@ -1,0 +1,11 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "BREAK001",
+      "status": "WARN",
+      "asset": "ja-JP/iphone-6.9/01",
+      "region": "headline"
+    }
+  ],
+  "exitCode": 0
+}

@@ -1,0 +1,11 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "COPY001",
+      "status": "FAIL",
+      "asset": "en-US/iphone-6.9/01",
+      "region": "headline"
+    }
+  ],
+  "exitCode": 1
+}

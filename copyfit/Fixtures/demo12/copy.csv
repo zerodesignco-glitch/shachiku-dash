@@ -1,0 +1,15 @@
+locale,key,text
+ja-JP,headline.01,"毎日の通勤を、
+もっと速く。"
+en-US,headline.01,"Make every commute
+faster."
+de-DE,headline.01,Jeden Arbeitsweg spürbar schneller und entspannter machen
+ja-JP,headline.02,"残業時間を自動で記録し
+、グラフで振り返る"
+en-US,headline.02,"Track overtime
+automatically"
+de-DE,headline.02,"Überstunden automatisch
+erfassen"
+ja-JP,badge,NEW
+en-US,badge,NEW
+de-DE,badge,NEU

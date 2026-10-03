@@ -1,0 +1,10 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "ASSET001",
+      "status": "FAIL",
+      "asset": "ja-JP/iphone-6.9/01"
+    }
+  ],
+  "exitCode": 1
+}

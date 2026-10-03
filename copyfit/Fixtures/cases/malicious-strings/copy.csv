@@ -1,0 +1,2 @@
+locale,key,text
+en-US,headline,"<script>alert('x')</script> & ""quotes"""

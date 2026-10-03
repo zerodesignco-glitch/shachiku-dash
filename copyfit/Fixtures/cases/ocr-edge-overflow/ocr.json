@@ -1,0 +1,15 @@
+{
+  "01.png": [
+    {
+      "text": "Jeden Arbeitsweg spürbar schnell",
+      "boundingBox": [
+        100,
+        250,
+        1190,
+        100
+      ],
+      "confidence": 0.9,
+      "engineRevision": "fixture"
+    }
+  ]
+}

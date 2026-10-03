@@ -1,0 +1,12 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "RULE001",
+      "status": "WARN",
+      "asset": null
+    }
+  ],
+  "exitCode": 0,
+  "now": "2026-10-03",
+  "rulesetFile": "ruleset.json"
+}

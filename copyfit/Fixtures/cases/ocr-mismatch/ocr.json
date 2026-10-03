@@ -1,0 +1,15 @@
+{
+  "01.png": [
+    {
+      "text": "Hello wor",
+      "boundingBox": [
+        300,
+        250,
+        690,
+        100
+      ],
+      "confidence": 0.95,
+      "engineRevision": "fixture"
+    }
+  ]
+}

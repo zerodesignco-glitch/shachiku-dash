@@ -1,0 +1,11 @@
+{
+  "deterministic": [
+    {
+      "ruleID": "COPY001",
+      "status": "FAIL",
+      "asset": "en-US/*/*",
+      "region": "headline"
+    }
+  ],
+  "exitCode": 1
+}

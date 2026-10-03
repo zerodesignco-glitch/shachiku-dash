@@ -1,0 +1,18 @@
+{
+  "deterministic": [],
+  "exitCode": 0,
+  "heuristicMustInclude": [
+    {
+      "ruleID": "FIT002",
+      "status": "WARN",
+      "asset": "de-DE/iphone-6.9/01",
+      "region": "headline"
+    },
+    {
+      "ruleID": "TEXT001",
+      "status": "WARN",
+      "asset": "de-DE/iphone-6.9/01",
+      "region": "headline"
+    }
+  ]
+}

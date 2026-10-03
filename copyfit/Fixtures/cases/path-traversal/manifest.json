@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "requiredLocales": [
+    "en-US"
+  ],
+  "requiredTargets": [
+    "iphone-6.9"
+  ],
+  "requiredSlots": [
+    "01"
+  ],
+  "fallbackPolicy": "explicit-only",
+  "assets": [
+    {
+      "locale": "en-US",
+      "target": "iphone-6.9",
+      "slot": "01",
+      "path": "../outside.png",
+      "expectedPixelSize": [
+        1290,
+        2796
+      ],
+      "textRegions": [
+        {
+          "id": "headline",
+          "copyKey": "headline",
+          "rectPx": [
+            80,
+            160,
+            1130,
+            300
+          ],
+          "maxLines": 2,
+          "fontPostScriptName": "Helvetica-Bold",
+          "fontSizePx": 96,
+          "lineHeightPx": 120,
+          "trackingPx": 0,
+          "alignment": "center",
+          "layoutMetadataVerified": false
+        }
+      ],
+      "forbiddenRectsPx": []
+    }
+  ],
+  "ruleset": "apple-screenshots-2026-10-03"
+}
