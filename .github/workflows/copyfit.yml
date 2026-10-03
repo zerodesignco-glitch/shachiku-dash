@@ -1,0 +1,40 @@
+name: copyfit
+on:
+  push:
+    paths: ["copyfit/**", ".github/workflows/copyfit.yml"]
+  pull_request:
+    paths: ["copyfit/**", ".github/workflows/copyfit.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  macos:
+    # Vision OCR / CoreText / ImageIO adapterのbuildと実機テスト
+    runs-on: macos-15
+    defaults:
+      run:
+        working-directory: copyfit
+    steps:
+      - uses: actions/checkout@v4
+      - run: sw_vers && swift --version
+      - run: swift build -Xswiftc -warnings-as-errors
+      - run: swift build -c release -Xswiftc -warnings-as-errors
+      - run: swift test
+      - name: demo12 audit (exit 1 = 意図的なFAILを含むfixture)
+        run: |
+          set +e
+          time .build/release/copyfit audit --manifest Fixtures/demo12/manifest.json --copy Fixtures/demo12/copy.csv --out "$RUNNER_TEMP/report" --now 2026-10-03
+          code=$?
+          test "$code" = 1
+  linux:
+    # CopyfitCore（OS非依存の決定ルール）のbuild/test
+    runs-on: ubuntu-latest
+    container: swift:6.0-noble
+    defaults:
+      run:
+        working-directory: copyfit
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift build -Xswiftc -warnings-as-errors
+      - run: swift build -c release -Xswiftc -warnings-as-errors
+      - run: swift test
