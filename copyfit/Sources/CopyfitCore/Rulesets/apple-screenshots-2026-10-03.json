@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "rulesetID": "apple-screenshots-2026-10-03",
+  "effectiveVersion": "App Store Connect Help: Screenshot specifications (as checked 2026-10-03)",
+  "checkedAt": "2026-10-03",
+  "maxAgeDays": 90,
+  "sourceURLs": [
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications",
+    "https://developer.apple.com/help/app-store-connect/manage-app-information/upload-app-previews-and-screenshots"
+  ],
+  "notes": "公式ページから転記。端末名から寸法を生成しない。alphaは公式記述『Images can't include alpha channels or transparencies.』に基づく。RGB色空間はページ本文に記載がなく対象外（KNOWN_LIMITATIONS参照）。",
+  "acceptedFormats": ["png", "jpeg"],
+  "alphaAllowed": false,
+  "maxScreenshotsPerSet": 10,
+  "targets": [
+    {"id": "iphone-6.9", "displayName": "iPhone 6.9\"",
+     "allowedPixelSizes": [[1260,2736],[1290,2796],[1320,2868],[2736,1260],[2796,1290],[2868,1320]]},
+    {"id": "iphone-6.5", "displayName": "iPhone 6.5\"",
+     "allowedPixelSizes": [[1284,2778],[1242,2688],[2778,1284],[2688,1242]]},
+    {"id": "iphone-6.3", "displayName": "iPhone 6.3\"",
+     "allowedPixelSizes": [[1179,2556],[1206,2622],[2556,1179],[2622,1206]]},
+    {"id": "iphone-6.1", "displayName": "iPhone 6.1\"",
+     "allowedPixelSizes": [[1170,2532],[1125,2436],[1080,2340],[2532,1170],[2436,1125],[2340,1080]]},
+    {"id": "iphone-5.5", "displayName": "iPhone 5.5\"",
+     "allowedPixelSizes": [[1242,2208],[2208,1242]]},
+    {"id": "ipad-13", "displayName": "iPad 13\"",
+     "allowedPixelSizes": [[2064,2752],[2048,2732],[2752,2064],[2732,2048]]},
+    {"id": "ipad-12.9", "displayName": "iPad 12.9\"",
+     "allowedPixelSizes": [[2048,2732],[2732,2048]]},
+    {"id": "ipad-11", "displayName": "iPad 11\"",
+     "allowedPixelSizes": [[1488,2266],[1668,2420],[1668,2388],[1640,2360],[2266,1488],[2420,1668],[2388,1668],[2360,1640]]}
+  ]
+}
